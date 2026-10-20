@@ -2,7 +2,7 @@
 
 Bài tập cá nhân: khảo sát website thương mại điện tử và xây dựng một cải tiến giao diện bằng HTML5/CSS3.
 
-**Trạng thái:** đã tạo mã nguồn, tài liệu và tăng cỡ chữ bảng theo lựa chọn của sinh viên từ gợi ý AI. Sinh viên đã gửi ảnh chạy trên máy tính; cần kiểm tra lại bản chỉnh sửa và giao diện điện thoại trước khi nộp. Chưa tạo repository hoặc triển khai GitHub Pages.
+**Trạng thái:** đã có mã nguồn, đã tải bản từ GitHub để kiểm tra. Sinh viên đã mở trang trên máy tính và gửi ảnh giao diện điện thoại. Qua các ảnh, bảng nằm gọn và bốn thẻ sản phẩm xếp hai cột; chưa xác nhận toàn bộ thao tác tương tác hoặc chiều rộng chính xác. Cần kiểm tra repository ở chế độ Public trước khi nộp. Chưa xác nhận triển khai GitHub Pages.
 
 ## 1. Giới thiệu
 
@@ -69,11 +69,11 @@ Các file chính:
 
 **Ý nghĩa mã:** `table`, `caption`, `th scope="row"`, `td` thể hiện quan hệ thông số–giá trị; CSS `nth-child(odd)` làm nền xen kẽ; Grid bố trí trang và media query điều chỉnh ở màn hình nhỏ.
 
-**Điều chỉnh sau khi chạy:** sinh viên đã mở trang, gửi ảnh và đồng ý gợi ý AI tăng chữ bảng từ 14px lên 16px (máy tính), 13px lên 15px (điện thoại). AI sửa CSS. Không ghi đây là lỗi sinh viên tự phát hiện; sinh viên cần kiểm tra lại và giải thích phần thay đổi. Xem KIEM_TRA.md.
+**Điều chỉnh sau khi chạy:** sinh viên đã mở trang, gửi ảnh và đồng ý gợi ý AI tăng chữ bảng từ 14px lên 16px (máy tính), 13px lên 15px (điện thoại). AI sửa CSS. Không ghi đây là lỗi sinh viên tự phát hiện; sinh viên đã gửi ảnh kiểm tra giao diện điện thoại sau điều chỉnh; cần đọc và giải thích phần thay đổi. Xem KIEM_TRA.md.
 
 ## 7. Hỗ trợ từ AI
 
-AI hỗ trợ phân tích, đối chiếu nhận xét với ảnh, đề xuất bố cục, tạo HTML/CSS và soạn tài liệu. Sinh viên đã gửi ảnh sản phẩm/giỏ hàng để đối chiếu. Chi tiết nằm trong AI_USAGE.md; việc chạy trang và giải thích mã của sinh viên cần bổ sung sau.
+AI hỗ trợ phân tích, đối chiếu nhận xét với ảnh, đề xuất bố cục, tạo HTML/CSS và soạn tài liệu. Sinh viên đã gửi ảnh sản phẩm/giỏ hàng để đối chiếu. Chi tiết nằm trong AI_USAGE.md; sinh viên đã mở trang và gửi ảnh kiểm tra trên máy tính/điện thoại; phần giải thích mã cần sinh viên đọc và nắm được.
 
 ## 8. Đưa lên GitHub — Nhiệm vụ 4
 
@@ -84,3 +84,7 @@ GitHub Pages có thể bật để xem trang trực tiếp, không phải yêu c
 ## 9. Nguồn ảnh
 
 Xem IMAGE_SOURCES.md. Ảnh tham khảo MWC chỉ phục vụ minh họa học tập; không sao chép toàn bộ website hoặc dùng gói này để kinh doanh.
+
+## 10. Kết quả kiểm tra bản tải từ GitHub
+
+Ngày 20/10/2026: ZIP giải nén hợp lệ; đủ HTML/CSS, 8 ảnh, 4 thẻ mẫu và 7 dòng thông số; đường dẫn nội bộ không thiếu. CSS bảng là 16px trên máy tính và 15px trên màn hình rộng tối đa 650px. Ảnh sinh viên gửi cho thấy bảng không chồng lấn, bốn thẻ xếp hai cột trên giao diện hẹp. Đây là kiểm tra qua ảnh và cấu trúc file, không thay thế kiểm thử mọi thao tác.

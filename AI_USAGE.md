@@ -86,8 +86,12 @@ Thông tin size và phiên bản đã có nên không cần bổ sung trùng. T�
 
 ## 7. Kiểm tra và chỉnh sửa mã của sinh viên
 
-Sinh viên đã mở trang trên Chrome và gửi ảnh chạy thử. AI gợi ý tăng chữ bảng; sinh viên đồng ý “ok làm theo ý m đi”. AI chỉnh `css/style.css`: `.spec-table` từ 14px thành 16px; trong media query `max-width:650px`, từ 13px thành 15px. Mục tiêu: tăng khả năng đọc. Đây là đề xuất AI được sinh viên lựa chọn, không phải lỗi do sinh viên tự phát hiện. Chưa có xác nhận đọc dễ hơn hoặc đã kiểm tra bản mới trên điện thoại.
+Sinh viên đã mở trang trên Chrome và gửi ảnh chạy thử. AI gợi ý tăng chữ bảng; sinh viên đồng ý “ok làm theo ý m đi”. AI chỉnh `css/style.css`: `.spec-table` từ 14px thành 16px; trong media query `max-width:650px`, từ 13px thành 15px. Mục tiêu: tăng khả năng đọc. Đây là đề xuất AI được sinh viên lựa chọn, không phải lỗi do sinh viên tự phát hiện. Sau điều chỉnh, sinh viên gửi 6 ảnh giao diện điện thoại. AI xem ảnh: bảng nằm gọn, nội dung xuống dòng trong ô; ảnh/size không chồng lấn, đủ bốn thẻ chia hai cột. Chưa xác nhận cảm nhận đọc dễ hơn, chiều rộng chính xác hoặc các thao tác bàn phím/liên kết.
 
 ## 8. Kiểm tra kỹ thuật của AI khi tạo gói
 
-Đã kiểm tra các đường dẫn file cục bộ, xác nhận đọc được 8 ảnh và có 4 thẻ mẫu cùng 7 hàng thông số. Chưa hoàn thành kiểm tra hiển thị bằng trình duyệt tự động do môi trường chạy chưa có trình duyệt và quá trình tải không thành công. Các breakpoint CSS là phương án đã viết, cần sinh viên xác nhận khi mở Chrome.
+Đã kiểm tra các đường dẫn file cục bộ, xác nhận đọc được 8 ảnh và có 4 thẻ mẫu cùng 7 hàng thông số. Chưa hoàn thành kiểm tra hiển thị bằng trình duyệt tự động do môi trường chạy chưa có trình duyệt và quá trình tải không thành công. Sau đó đã đối chiếu ảnh chạy thực tế do sinh viên gửi trên máy tính và giao diện điện thoại. Chưa kiểm tra tự động mọi chiều rộng hoặc thao tác.
+
+## 9. Đối chiếu yêu cầu tự điều chỉnh
+
+Đề yêu cầu sinh viên chỉnh ít nhất một điểm do bản thân phát hiện và giải thích được HTML/CSS đã sửa. Thay đổi cỡ chữ ở bài này là gợi ý của AI được sinh viên chấp nhận, nên không khẳng định đã chứng minh đầy đủ phần tự phát hiện. Không gán nhận xét của AI thành quan sát độc lập của sinh viên.
