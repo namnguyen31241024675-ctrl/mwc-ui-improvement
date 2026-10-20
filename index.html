@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bài tập cải tiến cách trình bày thông số giày nam bằng HTML5 và CSS3.">
+  <title>MWC 6760 | Bản cải tiến giao diện</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Đến nội dung chính</a>
+<div class="study-note">BÀI TẬP HTML/CSS <span>Giao diện minh họa • Không nhận đặt hàng</span></div>
+<header class="site-header">
+  <a class="wordmark" href="index.html" aria-label="Trang đầu bản minh họa">SHOE<span> / </span>STUDIO</a>
+  <nav aria-label="Điều hướng chính"><a href="#san-pham">Sản phẩm</a><a href="#thong-so">Thông số</a><a href="#goi-y">Gợi ý</a></nav>
+  <span class="header-label">LẤY CẢM HỨNG TỪ MWC</span>
+</header>
+<main id="main" class="container">
+  <nav class="breadcrumb" aria-label="Đường dẫn"><a href="index.html">Trang đầu</a><span aria-hidden="true">/</span><a href="#goi-y">Giày nam</a><span aria-hidden="true">/</span><span aria-current="page">MWC 6760</span></nav>
+  <section id="san-pham" class="product" aria-labelledby="product-title">
+    <div class="gallery">
+      <div class="main-image"><img src="images/product-main.jpg" width="900" height="960" alt="Giày Slip-on MWC 6760 màu đen, bề mặt caro và khóa kim loại"></div>
+      <div class="thumbnails" aria-label="Ảnh sản phẩm bổ sung">
+        <a href="images/product-detail-1.jpg" target="_blank" rel="noopener"><img src="images/product-detail-1.jpg" width="300" height="320" alt="Mở ảnh góc chụp bổ sung thứ nhất"></a>
+        <a href="images/product-detail-2.jpg" target="_blank" rel="noopener"><img src="images/product-detail-2.jpg" width="300" height="320" alt="Mở ảnh góc chụp bổ sung thứ hai"></a>
+        <a href="images/product-detail-3.jpg" target="_blank" rel="noopener"><img src="images/product-detail-3.jpg" width="300" height="320" alt="Mở ảnh góc chụp bổ sung thứ ba"></a>
+      </div>
+      <p class="image-hint">Chọn ảnh nhỏ để mở ảnh lớn trong thẻ mới.</p>
+    </div>
+    <div class="product-info">
+      <p class="eyebrow">GIÀY NAM / SLIP-ON</p>
+      <h1 id="product-title">Một đôi giày.<br>Nhiều cách phối.</h1>
+      <p class="product-name">Giày Tây Nam MWC 6760</p>
+      <p class="subtitle">Họa tiết caro · Khóa kim loại · Màu đen</p>
+      <p class="price">395.000 <span>đ</span></p>
+      <div class="color-row"><span>Màu sắc</span><span class="color-dot" aria-hidden="true"></span><strong>Đen</strong></div>
+      <fieldset class="sizes"><legend>Chọn kích thước <span>Minh họa lựa chọn</span></legend>
+        <div class="size-options">
+          <label><input type="radio" name="size" value="39" checked><span>39</span></label>
+          <label><input type="radio" name="size" value="40"><span>40</span></label>
+          <label><input type="radio" name="size" value="41"><span>41</span></label>
+          <label><input type="radio" name="size" value="42"><span>42</span></label>
+          <label><input type="radio" name="size" value="43"><span>43</span></label>
+        </div>
+      </fieldset>
+      <a class="text-link" href="#thong-so">Xem thông số trước khi chọn →</a>
+      <button class="buy-button" type="button" disabled>Thêm vào giỏ hàng — bản minh họa</button>
+      <p class="demo-note">Nút mua được vô hiệu hóa. Bài tập tập trung vào cách trình bày thông tin bằng HTML/CSS.</p>
+      <div class="quick-facts"><div><strong>02 cm</strong><span>Chiều cao đế</span></div><div><strong>39–43</strong><span>Dải kích thước</span></div><div><strong>Slip-on</strong><span>Không buộc dây</span></div></div>
+    </div>
+  </section>
+  <section id="thong-so" class="spec-section" aria-labelledby="spec-title">
+    <div class="section-intro"><p class="eyebrow">HIỂU SẢN PHẨM TRƯỚC KHI CHỌN</p><h2 id="spec-title">Thông tin rõ ràng.<br>Lựa chọn dễ dàng.</h2><p>Các đặc điểm chính được gom vào một bảng để bạn dễ tìm và đối chiếu.</p><span class="improvement-tag">Điểm cải tiến của bài tập</span></div>
+    <!-- Cải tiến chính: th dùng scope=row giúp liên kết tên thông số với giá trị. -->
+    <table class="spec-table"><caption>Thông số giày Tây Nam MWC 6760</caption><tbody>
+      <tr><th scope="row">Chất liệu</th><td>Da caro tổng hợp</td></tr>
+      <tr><th scope="row">Đế giày</th><td>PVC êm mềm, độ đàn hồi tốt, chống trơn trượt</td></tr>
+      <tr><th scope="row">Chiều cao</th><td>2 cm</td></tr>
+      <tr><th scope="row">Kiểu dáng</th><td>Slip-on nam, giày mọi nam</td></tr>
+      <tr><th scope="row">Màu sắc</th><td>Đen</td></tr>
+      <tr><th scope="row">Kích thước</th><td>39, 40, 41, 42, 43</td></tr>
+      <tr><th scope="row">Xuất xứ</th><td>Việt Nam</td></tr>
+    </tbody></table>
+  </section>
+  <section class="description" aria-labelledby="desc-title"><div><p class="eyebrow">PHONG CÁCH & SỬ DỤNG</p><h2 id="desc-title">Gọn gàng cho mỗi ngày.</h2></div><div><p>Thiết kế Slip-on không dây, bề mặt caro và chi tiết khóa kim loại tạo điểm nhấn. Có thể kết hợp cùng quần tây, suit hoặc jeans tùy phong cách.</p><p>Phù hợp đi làm công sở, dự tiệc và gặp gỡ bạn bè. Thông tin được tóm tắt từ mô tả sản phẩm MWC; màu ảnh có thể khác thực tế tùy màn hình và ánh sáng.</p></div></section>
+  <section id="goi-y" class="recommendations" aria-labelledby="rec-title"><div class="section-heading"><div><p class="eyebrow">KHÁM PHÁ THÊM</p><h2 id="rec-title">Gợi ý phong cách</h2></div><p>4 sản phẩm mẫu phục vụ bố cục bài tập.<br>Tên và giá bên dưới là dữ liệu minh họa.</p></div>
+    <div class="product-grid">
+<article class="product-card"><a class="card-image" href="images/sample-1.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh Slip-on thanh lịch"><img src="images/sample-1.jpg" width="640" height="640" loading="lazy" alt="Ảnh giày nam minh họa mẫu 1"></a><p class="card-code">MẪU MINH HỌA 01</p><h3>Slip-on thanh lịch</h3><p class="card-price">295.000 đ</p><a class="card-button" href="images/sample-1.jpg" target="_blank" rel="noopener">Xem ảnh mẫu <span aria-hidden="true">↗</span></a></article>
+<article class="product-card"><a class="card-image" href="images/sample-2.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh Giày nam công sở"><img src="images/sample-2.jpg" width="640" height="640" loading="lazy" alt="Ảnh giày nam minh họa mẫu 2"></a><p class="card-code">MẪU MINH HỌA 02</p><h3>Giày nam công sở</h3><p class="card-price">395.000 đ</p><a class="card-button" href="images/sample-2.jpg" target="_blank" rel="noopener">Xem ảnh mẫu <span aria-hidden="true">↗</span></a></article>
+<article class="product-card"><a class="card-image" href="images/sample-3.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh Giày da tối giản"><img src="images/sample-3.jpg" width="640" height="640" loading="lazy" alt="Ảnh giày nam minh họa mẫu 3"></a><p class="card-code">MẪU MINH HỌA 03</p><h3>Giày da tối giản</h3><p class="card-price">275.000 đ</p><a class="card-button" href="images/sample-3.jpg" target="_blank" rel="noopener">Xem ảnh mẫu <span aria-hidden="true">↗</span></a></article>
+<article class="product-card"><a class="card-image" href="images/sample-4.jpg" target="_blank" rel="noopener" aria-label="Mở ảnh Slip-on hằng ngày"><img src="images/sample-4.jpg" width="640" height="640" loading="lazy" alt="Ảnh giày nam minh họa mẫu 4"></a><p class="card-code">MẪU MINH HỌA 04</p><h3>Slip-on hằng ngày</h3><p class="card-price">235.000 đ</p><a class="card-button" href="images/sample-4.jpg" target="_blank" rel="noopener">Xem ảnh mẫu <span aria-hidden="true">↗</span></a></article>
+</div></section>
+</main>
+<footer class="site-footer"><strong>SHOE / STUDIO</strong><p>Bài tập cá nhân · Cải tiến giao diện thương mại điện tử</p><p>Thông tin và ảnh tham khảo: <a href="https://mwc.com.vn/" target="_blank" rel="noopener">MWC</a>. Đây là bản học tập độc lập, không phải website chính thức của MWC.</p></footer>
+</body></html>
