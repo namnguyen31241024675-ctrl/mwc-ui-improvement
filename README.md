@@ -2,7 +2,7 @@
 
 Bài tập cá nhân: khảo sát website thương mại điện tử và xây dựng một cải tiến giao diện bằng HTML5/CSS3.
 
-**Trạng thái:** đã có mã nguồn, đã tải bản từ GitHub để kiểm tra. Sinh viên đã mở trang trên máy tính và gửi ảnh giao diện điện thoại. Qua các ảnh, bảng nằm gọn và bốn thẻ sản phẩm xếp hai cột; chưa xác nhận toàn bộ thao tác tương tác hoặc chiều rộng chính xác. Cần kiểm tra repository ở chế độ Public trước khi nộp. Chưa xác nhận triển khai GitHub Pages.
+**Trạng thái:** đã có mã nguồn, đã tải bản từ GitHub để kiểm tra. Sinh viên đã mở trang trên máy tính và gửi ảnh giao diện điện thoại. Qua các ảnh, bảng nằm gọn và bốn thẻ sản phẩm xếp hai cột; chưa xác nhận toàn bộ thao tác tương tác hoặc chiều rộng chính xác. Repository đã được xác nhận ở chế độ Public. Chưa xác nhận triển khai GitHub Pages.
 
 ## 1. Giới thiệu
 
@@ -69,7 +69,7 @@ Các file chính:
 
 **Ý nghĩa mã:** `table`, `caption`, `th scope="row"`, `td` thể hiện quan hệ thông số–giá trị; CSS `nth-child(odd)` làm nền xen kẽ; Grid bố trí trang và media query điều chỉnh ở màn hình nhỏ.
 
-**Điều chỉnh sau khi chạy:** sinh viên đã mở trang, gửi ảnh và đồng ý gợi ý AI tăng chữ bảng từ 14px lên 16px (máy tính), 13px lên 15px (điện thoại). AI sửa CSS. Không ghi đây là lỗi sinh viên tự phát hiện; sinh viên đã gửi ảnh kiểm tra giao diện điện thoại sau điều chỉnh; cần đọc và giải thích phần thay đổi. Xem KIEM_TRA.md.
+**Điều chỉnh sau khi chạy:** Sau khi chạy thử, sinh viên yêu cầu AI tăng cỡ chữ bảng thông số lên 16px trên máy tính và 15px trên điện thoại. AI hỗ trợ sửa CSS; sinh viên mở lại trang và gửi ảnh kiểm tra giao diện. Ý tưởng tăng cỡ chữ ban đầu do AI gợi ý, sau đó được sinh viên lựa chọn và yêu cầu áp dụng. Xem KIEM_TRA.md.
 
 ## 7. Hỗ trợ từ AI
 
