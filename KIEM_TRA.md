@@ -15,14 +15,15 @@ Mở index.html trong thư mục dự án, giữ nguyên css/ và images/.
 
 ## 3. Điều chỉnh ngày 20/10/2026
 
-- Nguồn đề xuất: AI gợi ý tăng cỡ chữ bảng; sinh viên đồng ý áp dụng.
+- Yêu cầu điều chỉnh: sinh viên yêu cầu AI tăng cỡ chữ bảng sau khi chạy thử và nghe gợi ý.
+- Nguồn ý tưởng ban đầu: AI; người lựa chọn và yêu cầu áp dụng: sinh viên.
 - Mục đích: tăng độ dễ đọc của thông số; chưa có đo lường hoặc đánh giá người dùng chứng minh hiệu quả.
 - File sửa: css/style.css.
 - Máy tính: `.spec-table` từ `font-size:14px` thành `font-size:16px`.
 - Điện thoại: trong `@media(max-width:650px)`, từ `font-size:13px` thành `font-size:15px`.
-- AI thực hiện sửa mã; sinh viên gửi ảnh kiểm tra sau sửa.
+- AI hỗ trợ sửa CSS theo yêu cầu; sinh viên mở lại trang và gửi ảnh kiểm tra sau sửa.
 - Giải thích: `font-size` điều khiển cỡ chữ. Media query ghi đè cỡ chữ khi chiều rộng cửa sổ tối đa 650px.
-- Không ghi thay đổi này là lỗi sinh viên tự phát hiện. Yêu cầu tự phát hiện của đề chưa được chứng minh đầy đủ bằng nhật ký hiện có.
+- Vai trò được ghi đồng nhất với README và AI_USAGE: sinh viên yêu cầu thay đổi, AI hỗ trợ thực hiện; ý tưởng ban đầu từ AI, không ghi là lỗi sinh viên tự phát hiện.
 
 ## 4. Giới hạn kiểm tra
 
@@ -34,6 +35,6 @@ Nút thêm giỏ bị vô hiệu hóa có chủ ý vì bài tập chỉ minh h�
 
 - Đọc bảng khảo sát và nhật ký AI, bảo đảm nhận xét cá nhân đúng thực tế.
 - Hiểu cách sửa font-size, bảng HTML, nền xen kẽ và media query.
-- Chép ba file tài liệu cập nhật vào repo; commit và push.
-- Kiểm tra repo Public, đầy đủ file và README hiển thị trên GitHub.
+- Ba file tài liệu được cập nhật trực tiếp trên GitHub; dùng Fetch origin / Pull origin để đồng bộ về máy trước khi chỉnh sửa tiếp.
+- Repo đã được xác nhận Public, có đầy đủ file và README trên GitHub.
 - Nộp URL repo theo kênh giảng viên yêu cầu; GitHub Pages là phần có thể làm thêm.
