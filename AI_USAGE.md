@@ -84,14 +84,21 @@ Thông tin size và phiên bản đã có nên không cần bổ sung trùng. T�
 
 Đây là nội dung AI giải thích; không đồng nghĩa người học đã chứng minh hiểu. Tự chạy, đọc mã và bổ sung phần có thể giải thích.
 
-## 7. Kiểm tra và chỉnh sửa mã của sinh viên
+## 7. Yêu cầu điều chỉnh sau khi chạy thử
 
-Sinh viên đã mở trang trên Chrome và gửi ảnh chạy thử. AI gợi ý tăng chữ bảng; sinh viên đồng ý “ok làm theo ý m đi”. AI chỉnh `css/style.css`: `.spec-table` từ 14px thành 16px; trong media query `max-width:650px`, từ 13px thành 15px. Mục tiêu: tăng khả năng đọc. Đây là đề xuất AI được sinh viên lựa chọn, không phải lỗi do sinh viên tự phát hiện. Sau điều chỉnh, sinh viên gửi 6 ảnh giao diện điện thoại. AI xem ảnh: bảng nằm gọn, nội dung xuống dòng trong ô; ảnh/size không chồng lấn, đủ bốn thẻ chia hai cột. Chưa xác nhận cảm nhận đọc dễ hơn, chiều rộng chính xác hoặc các thao tác bàn phím/liên kết.
+Sau khi chạy thử, sinh viên yêu cầu AI tăng cỡ chữ bảng thông số lên 16px trên máy tính và 15px trên điện thoại. AI hỗ trợ sửa CSS; sinh viên mở lại trang và gửi ảnh kiểm tra giao diện. Ý tưởng tăng cỡ chữ ban đầu do AI gợi ý, sau đó được sinh viên lựa chọn và yêu cầu áp dụng.
+
+- Yêu cầu của sinh viên: “ok làm theo ý m đi”, sau khi AI đề xuất tăng cỡ chữ.
+- File AI sửa: `css/style.css`.
+- Quy tắc chung `.spec-table`: `font-size:14px` → `font-size:16px`.
+- Trong `@media(max-width:650px)`: `font-size:13px` → `font-size:15px`.
+- Kết quả kiểm tra qua 6 ảnh sinh viên gửi: bảng nằm gọn, nội dung xuống dòng trong ô; không thấy ảnh/size chồng lấn; đủ bốn thẻ chia hai cột.
+- Chưa xác nhận cảm nhận đọc dễ hơn, chiều rộng chính xác hoặc mọi thao tác bàn phím/liên kết.
 
 ## 8. Kiểm tra kỹ thuật của AI khi tạo gói
 
 Đã kiểm tra các đường dẫn file cục bộ, xác nhận đọc được 8 ảnh và có 4 thẻ mẫu cùng 7 hàng thông số. Chưa hoàn thành kiểm tra hiển thị bằng trình duyệt tự động do môi trường chạy chưa có trình duyệt và quá trình tải không thành công. Sau đó đã đối chiếu ảnh chạy thực tế do sinh viên gửi trên máy tính và giao diện điện thoại. Chưa kiểm tra tự động mọi chiều rộng hoặc thao tác.
 
-## 9. Đối chiếu yêu cầu tự điều chỉnh
+## 9. Phân biệt vai trò khi điều chỉnh
 
-Đề yêu cầu sinh viên chỉnh ít nhất một điểm do bản thân phát hiện và giải thích được HTML/CSS đã sửa. Thay đổi cỡ chữ ở bài này là gợi ý của AI được sinh viên chấp nhận, nên không khẳng định đã chứng minh đầy đủ phần tự phát hiện. Không gán nhận xét của AI thành quan sát độc lập của sinh viên.
+Sinh viên lựa chọn và yêu cầu áp dụng thay đổi; AI đề xuất ý tưởng ban đầu, hỗ trợ sửa mã và giải thích. Nhật ký không ghi ý tưởng này là vấn đề do sinh viên tự phát hiện. Sinh viên cần hiểu và giải thích được phần HTML/CSS đã sửa theo yêu cầu đề.
