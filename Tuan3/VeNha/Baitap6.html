@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6 - My Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .portfolio {
+            max-width: 1100px;
+            margin: 40px auto;
+            text-align: center;
+        }
+
+        .portfolio h2 {
+            margin: 0;
+            padding-top: 30px;
+            font-size: 28px;
+        }
+
+        .portfolio h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 2px;
+            margin: 18px auto;
+            background-color: #75b9bb;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        .list-tab {
+            margin: 0;
+            padding: 10px 0 30px;
+        }
+
+        .list-tab li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        .list-tab a {
+            color: #444;
+            font-size: 14px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .list-tab li:first-child a {
+            color: #36a6a6;
+        }
+
+        .portfolio {
+            background-color: #f8f8f8;
+        }
+
+        .galerry {
+            margin: 0;
+            background-color: white;
+            font-size: 0;
+        }
+
+        .galerry li {
+            display: inline-block;
+            width: 32%;
+            margin: 0 0.66% 16px;
+            vertical-align: top;
+        }
+
+        .galerry img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="portfolio">
+        <h2>MY PORTFOLIO</h2>
+
+        <ul class="list-tab">
+            <li><a href="./">All</a></li>
+            <li><a href="./">Web App</a></li>
+            <li><a href="./">UI/UX</a></li>
+            <li><a href="./">Graphics Design</a></li>
+            <li><a href="./">Mobile App</a></li>
+            <li><a href="./">Branding</a></li>
+            <li><a href="./">Marketing</a></li>
+        </ul>
+
+        <ul class="galerry">
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 1"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 2"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 3"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 4"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 5"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 6"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 7"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 8"></a></li>
+            <li><a href="./"><img src="img_350x260.png" alt="Dự án 9"></a></li>
+        </ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+#root {
+    width: 1024px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+#site-header {
+    margin-bottom: 35px;
+    padding: 15px;
+    background-color: #ccc;
+    color: white;
+    font-size: 30px;
+    text-shadow: 2px 2px 2px black;
+}
+
+#site-header span {
+    padding-left: 75px;
+    background-image: url("../imgs/logo.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 60px auto;
+}
+
+.superheroes {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.superheroes li {
+    display: inline-block;
+    position: relative;
+    width: 170px;
+    margin: 0 2px;
+    vertical-align: bottom;
+}
+
+.superheroes img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #555;
+    border-radius: 16px;
+}
+
+.hero-header {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    color: #aaa;
+}
+
+.superheroes a {
+    display: none;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #666;
+    color: white;
+    text-decoration: none;
+}
+
+.superheroes li:hover {
+    width: 200px;
+}
+
+.superheroes li:hover .hero-header {
+    color: white;
+}
+
+.superheroes li:hover a {
+    display: block;
+    text-decoration: underline;
+}
