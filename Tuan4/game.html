@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Anh Hùng Javascript vs Rồng Già</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #13151f;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 15px;
+        }
+        h1 {
+            color: #f1c40f;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 0 2px 10px rgba(241, 196, 15, 0.3);
+        }
+        /* Khung đấu trường chính */
+        .arena {
+            width: 100%;
+            max-width: 850px;
+            background: radial-gradient(circle at center, #251d2e 0%, #161822 100%);
+            border: 2px solid #f1c40f;
+            border-radius: 14px;
+            padding: 35px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+        }
+        .character {
+            width: 240px;
+            text-align: center;
+        }
+        .avatar {
+            width: 115px;
+            height: 115px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            background-color: #1c1f2b;
+        }
+        .hero-avatar {
+            border: 3px solid #3498db;
+            box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+        }
+        .dragon-avatar {
+            border: 3px solid #e74c3c;
+            box-shadow: 0 0 20px rgba(231, 76, 60, 0.7);
+        }
+        .hero-name {
+            color: #3498db;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+        .dragon-name {
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+        /* Thanh máu HP */
+        .hp-bar-bg {
+            width: 100%;
+            height: 14px;
+            background-color: #2c3e50;
+            border: 1.5px solid #ffffff;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+        .hp-bar-fill {
+            height: 100%;
+            background-color: #2ecc71;
+            width: 100%;
+            transition: width 0.3s ease;
+        }
+        .stats {
+            font-size: 12px;
+            color: #bdc3c7;
+            line-height: 1.5;
+        }
+        /* Khu vực nút bấm */
+        .controls {
+            width: 100%;
+            max-width: 850px;
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        button {
+            border: none;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+        button:active {
+            transform: scale(0.98);
+        }
+        button:disabled {
+            background-color: #7f8c8d !important;
+            cursor: not-allowed;
+            opacity: 0.8;
+        }
+        #btn-attack {
+            flex: 2;
+            background-color: #e67e22;
+        }
+        #btn-auto {
+            flex: 2;
+            background-color: #2980b9;
+        }
+        #btn-reset {
+            flex: 0.8;
+            background-color: #34495e;
+            font-size: 14px;
+        }
+        /* Khung nhật ký chiến đấu */
+        .battle-log {
+            width: 100%;
+            max-width: 850px;
+            height: 190px;
+            background-color: #0b0d13;
+            border: 1px solid #34495e;
+            border-radius: 8px;
+            padding: 15px 20px;
+            overflow-y: auto;
+            font-family: 'Consolas', monospace;
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        .log-hero { color: #3498db; }
+        .log-dragon { color: #e74c3c; }
+        .log-crit { color: #f1c40f; font-weight: bold; }
+        .log-miss { color: #95a5a6; font-style: italic; }
+        .log-end { color: #2ecc71; font-weight: bold; font-size: 15px; margin-top: 5px; }
+    </style>
+</head>
+<body>
+
+    <h1>⚔️ ANH HÙNG JAVASCRIPT VS RỒNG GIÀ 🐉</h1>
+
+    <div class="arena">
+        <!-- Khu vực Anh Hùng -->
+        <div class="character">
+            <!-- Thay 'ten_anh_cua_ban.jpg' bằng tên file ảnh của bạn -->
+            <img src="anhhung.jpg" alt="Hero Avatar" class="avatar hero-avatar">
+            <div class="hero-name" id="hero-title">Anh Hùng<br>(Phân cấp - Lv.5)</div>
+            <div class="hp-bar-bg">
+                <div class="hp-bar-fill" id="hero-hp-bar"></div>
+            </div>
+            <div class="stats" id="hero-stats">HP: 105/105 | STR: 0 | AGI: 0 | INT: 0</div>
+        </div>
+
+        <!-- Khu vực Rồng Già -->
+        <div class="character">
+            <div class="avatar dragon-avatar">🐉</div>
+            <div class="dragon-name">Rồng Già</div>
+            <div class="hp-bar-bg">
+                <div class="hp-bar-fill" id="dragon-hp-bar"></div>
+            </div>
+            <div class="stats" id="dragon-stats">HP: 600/600 | STR: 100 | AGI: 15 | INT: 80</div>
+        </div>
+    </div>
+
+    <!-- Hàng nút điều khiển -->
+    <div class="controls">
+        <button id="btn-attack" onclick="nextTurn()">⚔️ ĐÁNH LƯỢT TIẾP THEO</button>
+        <button id="btn-auto" onclick="toggleAuto()">⏩ TỰ ĐỘNG ĐÁNH</button>
+        <button id="btn-reset" onclick="resetGame()">🔄 CHƠI LẠI</button>
+    </div>
+
+    <!-- Hộp nhật ký chiến đấu -->
+    <div class="battle-log" id="battle-log"></div>
+
+    <script>
+        // Biến toàn cục lưu chỉ số
+        let heroName = "Nguyễn Thanh Nam";
+        let phancap = "Chiến Binh";
+        let level = 5;
+        let maxHealth = 105, health = 105;
+        let strength = 0, agility = 0, intel = 0;
+
+        let dragonMaxHealth = 600, dragonHealth = 600;
+        let dragonStr = 100, dragonAgi = 15, dragonInt = 80;
+
+        let gameContinue = true;
+        let autoInterval = null;
+
+        // Khởi tạo nhân vật dựa theo logic các bài tập trước
+        function initCharacter() {
+            // Tính chỉ số cơ bản ở cấp 2 (skillPoints = 40, xp = 350)
+            let skillPoints = 40;
+            let xp = 350;
+            strength = (0.6 * skillPoints) + (0.1 * xp); // 59
+            agility = (0.2 * skillPoints) + (0.2 * xp);  // 78
+            intel = (0.2 * skillPoints) + (10 * 2);      // 28
+
+            // Nhập tên & kiểm tra trí nhớ
+            let inputName = prompt("Nhập tên Anh Hùng của bạn:", heroName);
+            if (inputName && inputName.trim() !== "") {
+                heroName = inputName.trim();
+            }
+
+            let checkName = prompt("Nhập lại tên của bạn để kiểm tra trí nhớ:");
+            if (checkName === heroName) {
+                intel += 5;
+            } else {
+                intel -= 5;
+            }
+
+            // Chọn phân cấp
+            let choice = prompt("Bạn muốn chọn phân cấp nào?\na: Chiến Binh | b: Sát Thủ | c: Thợ Săn", "a");
+            if (choice === "a") {
+                phancap = "Chiến Binh";
+                strength += 15; // 59 + 15 = 74.0
+                agility -= 10;  // 78 - 10 = 68.0
+                intel -= 5;     // 33 - 5 = 28.0 (hoặc 34 tùy lúc cộng)
+            } else if (choice === "b") {
+                phancap = "Sát Thủ";
+                strength -= 15;
+                agility += 10;
+                intel += 5;
+            } else if (choice === "c") {
+                phancap = "Thợ Săn";
+                strength -= 15;
+                intel += 15;
+            } else {
+                phancap = "Tập Sự";
+            }
+
+            level = 5;
+            maxHealth = level + 100; // 105
+            health = maxHealth;
+            dragonHealth = dragonMaxHealth;
+            gameContinue = true;
+
+            document.getElementById("battle-log").innerHTML = "";
+            document.getElementById("btn-attack").disabled = false;
+            document.getElementById("btn-auto").disabled = false;
+            updateUI();
+        }
+
+        // Cập nhật giao diện và thanh máu
+        function updateUI() {
+            document.getElementById("hero-title").innerHTML = `${heroName}<br>(${phancap} - Lv.${level})`;
+            document.getElementById("hero-stats").innerText = 
+                `HP: ${Math.max(0, health)}/${maxHealth} | STR: ${strength.toFixed(1)} | AGI: ${agility.toFixed(1)} | INT: ${intel.toFixed(1)}`;
+            document.getElementById("hero-hp-bar").style.width = `${Math.max(0, (health / maxHealth) * 100)}%`;
+
+            document.getElementById("dragon-stats").innerText = 
+                `HP: ${Math.max(0, dragonHealth)}/${dragonMaxHealth} | STR: ${dragonStr} | AGI: ${dragonAgi} | INT: ${dragonInt}`;
+            document.getElementById("dragon-hp-bar").style.width = `${Math.max(0, (dragonHealth / dragonMaxHealth) * 100)}%`;
+        }
+
+        // Thêm dòng log vào khung đen bên dưới
+        function addLog(text, className) {
+            const logBox = document.getElementById("battle-log");
+            const p = document.createElement("div");
+            p.className = className;
+            p.innerText = `> ${text}`;
+            logBox.appendChild(p);
+            logBox.scrollTop = logBox.scrollHeight; // Tự cuộn xuống dòng mới nhất
+        }
+
+        // Xử lý 1 lượt đánh (thay alert bằng addLog)
+        function nextTurn() {
+            if (!gameContinue) return;
+
+            // 1. Anh hùng tấn công
+            let heroHit = Math.random() * 100 > dragonAgi;
+            if (heroHit) {
+                dragonHealth -= strength;
+                addLog(`TRẢM LONG! Bạn gây sát thương ${strength.toFixed(1)} điểm cho Rồng!`, "log-hero");
+                
+                let heroCritical = Math.random() * 100 < intel;
+                if (heroCritical) {
+                    let critDmg = strength * 2;
+                    dragonHealth -= critDmg;
+                    addLog(`CHÍ MẠNG! Bạn gây sát thương chí mạng thêm ${critDmg.toFixed(1)} điểm cho Rồng!`, "log-crit");
+                }
+            } else {
+                addLog(`XỈ HỤT! Rồng đã lượn tránh được đòn tấn công của Bạn!`, "log-miss");
+            }
+
+            // Kiểm tra Rồng chết chưa
+            if (dragonHealth <= 0) {
+                dragonHealth = 0;
+                endGame("CHIẾN THẮNG!!! Chúc mừng bạn đã tiêu diệt Rồng Già!!!");
+                updateUI();
+                return;
+            }
+
+            // 2. Rồng tấn công
+            let dragonHit = Math.random() * 100 > agility;
+            if (dragonHit) {
+                health -= dragonStr;
+                addLog(`HỎA CẦU! Rồng gây sát thương ${dragonStr} điểm cho Bạn!`, "log-dragon");
+                
+                let dragonCritical = Math.random() * 100 < dragonInt;
+                if (dragonCritical) {
+                    let dCritDmg = dragonStr * 2;
+                    health -= dCritDmg;
+                    addLog(`CHÍ MẠNG! Rồng gây thêm ${dCritDmg} sát thương cho Bạn!`, "log-crit");
+                }
+            } else {
+                addLog(`XỈ HỤT! Bạn đã tránh được đòn tấn công từ Rồng!`, "log-miss");
+            }
+
+            // Kiểm tra Anh Hùng chết chưa
+            if (health <= 0) {
+                health = 0;
+                endGame("THẤT BẠI!!! Chúc mừng bạn đã có tên trên menu món tối của Rồng: Hiệp sĩ nướng lá lốt!");
+            }
+
+            updateUI();
+        }
+
+        // Kết thúc trận đấu
+        function endGame(message) {
+            gameContinue = false;
+            clearInterval(autoInterval);
+            autoInterval = null;
+            document.getElementById("btn-attack").disabled = true;
+            document.getElementById("btn-auto").disabled = true;
+            document.getElementById("btn-auto").innerText = "⏩ TỰ ĐỘNG ĐÁNH";
+            addLog(message, "log-end");
+        }
+
+        // Chế độ tự động đánh mỗi 0.8 giây
+        function toggleAuto() {
+            if (!gameContinue) return;
+            const btnAuto = document.getElementById("btn-auto");
+            if (autoInterval) {
+                clearInterval(autoInterval);
+                autoInterval = null;
+                btnAuto.innerText = "⏩ TỰ ĐỘNG ĐÁNH";
+            } else {
+                btnAuto.innerText = "⏸️ DỪNG TỰ ĐỘNG";
+                nextTurn();
+                autoInterval = setInterval(nextTurn, 800);
+            }
+        }
+
+        // Nút chơi lại
+        function resetGame() {
+            clearInterval(autoInterval);
+            autoInterval = null;
+            document.getElementById("btn-auto").innerText = "⏩ TỰ ĐỘNG ĐÁNH";
+            initCharacter();
+        }
+
+        // Chạy game khi mở trang
+        window.onload = initCharacter;
+    </script>
+</body>
+</html>
