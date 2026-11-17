@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JavaScript Labs — Nguyễn Thanh Nam</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.65;
+      color: #243349;
+      background: #f3f5fa;
+    }
+
+    main {
+      width: min(1080px, 92%);
+      margin: 40px auto;
+    }
+
+    header, section {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      margin-bottom: 22px;
+      border: 1px solid #e1e6ef;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .avatar {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      border: 5px solid #e9edff;
+    }
+
+    h1, h2, h3 { line-height: 1.3; }
+    h1 { margin: 6px 0 12px; }
+    h2 { margin-top: 0; }
+    p { margin: 8px 0; }
+
+    .eyebrow {
+      color: #4e59b8;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    a { color: #3445a4; }
+    a:hover { color: #a33d19; }
+
+    a:focus-visible, summary:focus-visible {
+      outline: 3px solid #dc8f32;
+      outline-offset: 4px;
+    }
+
+    .button {
+      display: inline-block;
+      margin: 12px 10px 0 0;
+      padding: 9px 16px;
+      border-radius: 9px;
+      background: #3445a4;
+      color: white;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: #263580;
+      color: white;
+    }
+
+    .labs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .lab {
+      padding: 20px;
+      border: 1px solid #dce2ed;
+      border-radius: 12px;
+      background: #fafbfe;
+    }
+
+    .lab h3 { margin-top: 0; }
+    summary { cursor: pointer; font-weight: bold; }
+    ul { padding-left: 22px; }
+    li { margin: 7px 0; }
+
+    footer {
+      text-align: center;
+      padding: 10px 0 25px;
+      color: #59677a;
+    }
+
+    @media (max-width: 760px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .labs { grid-template-columns: 1fr; }
+      header, section { padding: 22px; }
+      main { margin-top: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+<main>
+  <header>
+    <img
+      class="avatar"
+      src="images/avatar.png"
+      alt="Ảnh hamster được chọn làm ảnh đại diện"
+    >
+
+    <div>
+      <p class="eyebrow">HỒ SƠ THỰC HÀNH JAVASCRIPT</p>
+      <h1>Nguyễn Thanh Nam</h1>
+      <p><strong>MSSV:</strong> 31241024675</p>
+      <p><strong>Học phần:</strong> Phát triển ứng dụng thương mại điện tử</p>
+      <p><strong>Mã học phần:</strong> INF509027</p>
+      <p><strong>Lớp học phần:</strong> 26C1INF50902702</p>
+      <p><strong>Giảng viên:</strong> TS. Nguyễn Mạnh Tuấn</p>
+
+      <a
+        class="button"
+        href="https://github.com/namnguyen31241024675-ctrl"
+      >
+        GitHub cá nhân
+      </a>
+
+      <a class="button" href="../index.html">Website MWC</a>
+    </div>
+  </header>
+
+  <section>
+    <h2>Giới thiệu</h2>
+    <p>
+      Ba bài Lab này giúp em đi từ nền tảng JavaScript đến việc làm
+      cho trang web tương tác được: Lab 08 học ngôn ngữ, Lab 09 điều
+      khiển giao diện bằng DOM và sự kiện, Lab 10 dùng jQuery để viết
+      nhanh và gọn hơn. JavaScript là phần “sống” của website.
+      Nó kiểm tra dữ liệu người dùng nhập, cập nhật nội dung mà
+      không cần tải lại trang và tạo hiệu ứng, những thứ trang
+      thương mại điện tử nào cũng cần.
+    </p>
+  </section>
+
+  <section>
+    <h2>Các bài thực hành</h2>
+    <p>Chọn một bài bên dưới để mở kết quả thực hành.</p>
+
+    <div class="labs">
+      <article class="lab">
+        <h3>Lab 08</h3>
+        <p>JavaScript Language Foundations</p>
+
+        <details open>
+          <summary>11 bài thực hành</summary>
+          <ul>
+            <li>
+              <a href="Lab08/exercise01.html">
+                8.1 Bật và tắt JavaScript
+              </a>
+            </li>
+            <li>
+              <a href="Lab08/lab08-walkthrough02.html">
+                8.2 JavaScript nhúng
+              </a>
+            </li>
+            <li>
+              <a href="Lab08/exercise03.html">
+                8.3 JavaScript bên ngoài
+              </a>
+            </li>
+            <li>
+              <a href="Lab08/exercise04.html">8.4 Noscript</a>
+            </li>
+            <li>
+              <a href="Lab08/exercise05.html">8.5 Browser Console</a>
+            </li>
+            <li>
+              <a href="Lab08/lab08-walkthrough06.html">
+                8.6 String Date và Math
+              </a>
+            </li>
+            <li>
+              <a href="Lab08/lab08-walkthrough07.html">8.7 Mảng</a>
+            </li>
+            <li>
+              <a href="Lab08/lab08-walkthrough08.html">8.8 Hàm</a>
+            </li>
+            <li>
+              <a href="Lab08/lab08-walkthrough09.html">
+                8.9 Hàm làm tham số
+              </a>
+            </li>
+            <li>
+              <a href="Lab08/lab08-walkthrough10.html">8.10 Object</a>
+            </li>
+            <li>
+              <a href="Lab08/lab08-walkthrough11.html">
+                8.11 Mảng object
+              </a>
+            </li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="lab">
+        <h3>Lab 09</h3>
+        <p>DOM and Events</p>
+
+        <details open>
+          <summary>8 bài thực hành</summary>
+          <ul>
+            <li>
+              <a href="Lab09/lab09-walkthrough01.html">
+                9.1 Chọn phần tử DOM
+              </a>
+            </li>
+            <li>
+              <a href="Lab09/lab09-walkthrough02.html">
+                9.2 Quan hệ node
+              </a>
+            </li>
+            <li>
+              <a href="Lab09/lab09-walkthrough03.html">
+                9.3 Thay đổi DOM
+              </a>
+            </li>
+            <li>
+              <a href="Lab09/lab09-walkthrough04.html">
+                9.4 Xử lý sự kiện
+              </a>
+            </li>
+            <li>
+              <a href="Lab09/lab09-walkthrough05.html">
+                9.5 Sự kiện load
+              </a>
+            </li>
+            <li>
+              <a href="Lab09/exercise06.html">9.6 Debugger</a>
+            </li>
+            <li>
+              <a href="Lab09/lab09-walkthrough07.html">
+                9.7 Focus và blur
+              </a>
+            </li>
+            <li>
+              <a href="Lab09/lab09-walkthrough08.html">
+                9.8 Kiểm tra form
+              </a>
+            </li>
+          </ul>
+        </details>
+      </article>
+
+      <article class="lab">
+        <h3>Lab 10</h3>
+        <p>jQuery</p>
+
+        <details open>
+          <summary>10 bài thực hành</summary>
+          <ul>
+            <li>
+              <a href="Lab10/lab10-walkthrough01.html">
+                10.1 Tải jQuery
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough01.html">
+                10.2 Selector cơ bản
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough03.html">
+                10.3 Selector nâng cao
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough04.html">
+                10.4 Sự kiện jQuery
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough05.html">
+                10.5 Chèn phần tử
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough06.html">
+                10.6 Fade và slide
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough07.html">
+                10.7 Xem trước ảnh
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough08.html">
+                10.8 Chuỗi hoạt ảnh
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough09.html">
+                10.9 GET dữ liệu
+              </a>
+            </li>
+            <li>
+              <a href="Lab10/lab10-walkthrough10.html">
+                10.10 Xử lý jqXHR
+              </a>
+            </li>
+          </ul>
+        </details>
+      </article>
+    </div>
+
+    <p>Lab 10.1 và 10.2 dùng chung trang theo bộ mã thực hành.</p>
+    <p>
+      Bài GET có dữ liệu JSON mẫu trong dự án và lựa chọn dịch vụ
+      của giáo trình. Lần thử dịch vụ ngoài đã gặp lỗi truy cập;
+      dữ liệu mẫu và ca lỗi 404 đã được kiểm tra trên Live Server.
+    </p>
+  </section>
+
+  <section>
+    <h2>Kiến thức đã học</h2>
+
+    <h3>Lab 08 — Language Foundations</h3>
+    <p>
+      Em hiểu biến dùng để lưu dữ liệu, mỗi kiểu như chuỗi, số và
+      đối tượng ngày có cách xử lý riêng. Mảng giúp quản lý danh
+      sách như danh sách sản phẩm, còn object gom thông tin của
+      một đối tượng như tên, giá và số lượng vào một chỗ.
+      Hàm giúp đóng gói đoạn code để dùng lại, ví dụ hàm tính
+      thuế và tổng tiền ở Exercise 8.9 rất giống cách tính giỏ
+      hàng. Em cũng biết dùng Console để in kết quả và tìm lỗi.
+    </p>
+
+    <h3>Lab 09 — DOM and Events</h3>
+    <p>
+      DOM biểu diễn trang HTML thành cây phần tử, nhờ đó
+      JavaScript có thể chọn, đọc, thay đổi nội dung, thuộc tính
+      và cách hiển thị, hoặc thêm và xóa phần tử. Các sự kiện
+      như click, mouseover và mouseout giúp trang phản ứng với
+      thao tác người dùng. Ở Exercise 9.8, em thực hành bắt sự
+      kiện submit, kiểm tra các ô trống và hiển thị thông báo.
+      Form minh họa dùng preventDefault() để không gửi dữ liệu đi.
+    </p>
+
+    <h3>Lab 10 — jQuery</h3>
+    <p>
+      jQuery giúp chọn phần tử, gắn sự kiện và thao tác DOM bằng
+      cú pháp ngắn gọn. Em đã thử các hiệu ứng ẩn/hiện, trượt
+      và tạo khung xem trước ảnh khi rê chuột. Ở Exercise 10.9
+      và 10.10, em dùng $.get để tải JSON mẫu, hiển thị danh sách
+      và xử lý kết quả qua jqXHR. Dữ liệu mẫu tải thành công;
+      đường dẫn sai trả lỗi 404, còn lần thử dịch vụ giáo trình
+      gặp lỗi truy cập.
+    </p>
+  </section>
+
+  <section>
+    <h2>Tự đánh giá</h2>
+    <p>
+      Qua ba Lab, em hiểu thêm cách JavaScript giúp trang web
+      phản ứng với thao tác người dùng. Em thích Exercise 9.8
+      vì kiểm tra được dữ liệu trống và Exercise 10.7 vì khung
+      xem trước ảnh có thể áp dụng cho trang bán hàng.
+      Exercise 10.10 khó nhất vì cần xử lý việc tải dữ liệu
+      bất đồng bộ, cả khi thành công và khi lỗi. Trong thực
+      hành, JSON mẫu tải thành công, còn dịch vụ giáo trình
+      gặp lỗi truy cập. Với website MWC, em có thể vận dụng
+      kiến thức để kiểm tra form, xem trước ảnh và tải danh
+      sách sản phẩm. Em cần luyện thêm cách xử lý bất đồng
+      bộ và dùng Console để tìm nguyên nhân lỗi.
+    </p>
+  </section>
+
+  <footer>
+    Nguyễn Thanh Nam · 31241024675 · JavaScript Labs
+  </footer>
+</main>
+</body>
+</html>

@@ -443,3 +443,26 @@ Chưa kiểm tra việc Analytics thu thập dữ liệu thực tế.
 - Không kiểm thử đặt hàng vì nút mua bị vô hiệu hóa có chủ ý.
 - Không suy ra hiệu quả trải nghiệm người dùng từ việc giao diện nhìn gọn hơn.
 - Các nội dung kiểm tra được ghi theo minh chứng đã thực hiện, không đánh dấu đạt cho phần chưa thử.
+
+## 17/11/2026 — JavaScript Labs
+
+- Người thực hiện: Nguyễn Thanh Nam.
+- Công cụ hỗ trợ: ChatGPT.
+- Đầu vào: yêu cầu bài cá nhân, ba bộ Lab08–Lab10
+  và mã nguồn MWC hiện có.
+- AI hỗ trợ giải thích, đề xuất mã JavaScript/jQuery,
+  hướng dẫn tổ chức thư mục, kiểm tra lỗi và đọc ảnh kết quả.
+- Sinh viên tạo và chỉnh sửa file trên máy, chạy bằng Live Server,
+  thực hiện thao tác trình duyệt và lưu ảnh minh chứng.
+- Các lỗi đã xử lý trong quá trình thực hành gồm:
+  đặt HTML nhầm vào file JS, gọi script trùng,
+  đặt mã inline trong thẻ script có src và thiếu ô chọn nguồn GET.
+- Đã thử tải JSON mẫu thành công và xử lý lỗi HTTP 404.
+  Dịch vụ giáo trình đã được thử nhưng gặp lỗi truy cập.
+- AI hỗ trợ mã bố cục trang chủ và README.
+- Sinh viên cung cấp bản nháp phần giới thiệu, kiến thức
+  và tự đánh giá; AI hỗ trợ biên tập, rút gọn và đối chiếu
+  mô tả với kết quả thực hành.
+- Kiểm tra trên Live Server: đã mở các liên kết bài tập
+  từ trang chủ, chưa ghi nhận lỗi 404 trong lần thử này.
+- Chưa xác nhận kết quả kiểm tra GitHub Pages ở thời điểm ghi log.
